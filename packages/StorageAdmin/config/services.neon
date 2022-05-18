@@ -1,0 +1,2 @@
+services:
+	- Pd\StorageAdmin\Router\RouterFactory::createRouter
