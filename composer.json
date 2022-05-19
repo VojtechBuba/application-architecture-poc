@@ -37,9 +37,9 @@
         }
     },
     "replace": {
-        "pd/storage": "self.version",
-        "pd/storage-admin": "self.version",
-        "pd/storage-sdk": "self.version"
+        "pd/storage": "1.0.0",
+        "pd/storage-admin": "1.0.0",
+        "pd/storage-sdk": "1.0.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
