@@ -1,0 +1,25 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+
+php:
+	max_execution_time: 0
+	memory_limit: 1000M
+
+extensions:
+#	console: Kdyby\Console\DI\ConsoleExtension
+	mezzioDiBridge: Pd\Storage\Infrastructure\MezzioBridge\DI\MezzioDependencyInjectionBridgeExtension
+
+mezzioDiBridge:
+	url: http://api.storage.test
+
+application:
+	scanDirs: false
+
+includes:
+
+services:
+	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\PingHandler
+
