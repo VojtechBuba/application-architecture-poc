@@ -35,6 +35,12 @@
             "Pd\\StorageAdmin\\": "app/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../packages/storage-sdk"
+        }
+    ],
     "extra": {
         "branch-alias": {
             "dev-main": "1.4-dev"

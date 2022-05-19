@@ -6,6 +6,9 @@ application:
 	mapping:
 		*: Pd\StorageAdmin\*Module\Presenters\*Presenter
 
+extensions:
+	storageSdk: Pd\StorageSDK\DI\StorageSDKExtension
+
 session:
 	expiration: 14 days
 
@@ -14,3 +17,6 @@ di:
 	export:
 		parameters: no
 		tags: no
+
+storageSdk:
+	basePath: http://api.pdstorage.test
