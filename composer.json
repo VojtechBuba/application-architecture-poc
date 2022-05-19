@@ -8,6 +8,9 @@
     ],
     "require": {
         "latte/latte": "^2.9",
+        "mezzio/mezzio": "^3.9.0",
+        "mezzio/mezzio-helpers": "^5.8.0",
+        "mezzio/mezzio-laminasrouter": "^3.4.0",
         "nette/application": "^3.1",
         "nette/bootstrap": "^3.1",
         "nette/caching": "^3.1",

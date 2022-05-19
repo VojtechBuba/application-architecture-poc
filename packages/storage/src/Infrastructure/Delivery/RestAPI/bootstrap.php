@@ -11,7 +11,7 @@ $configurator->enableTracy(__DIR__ . '/log');
 \Tracy\Debugger::$showBar = FALSE;
 
 $configurator->setTimeZone('Europe/Prague');
-$configurator->setTempDirectory(__DIR__ . '/../../../temp');
+$configurator->setTempDirectory(__DIR__ . '/temp');
 
 $configurator->addParameters([
 	'srcDir' => __DIR__ . '/../../../src',
