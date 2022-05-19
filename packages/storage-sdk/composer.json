@@ -19,5 +19,11 @@
         }
     },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "nette/di": "^3.0",
+        "nette/schema": "^1.2"
+    }
 }
