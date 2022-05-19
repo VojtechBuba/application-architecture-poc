@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": ">= 7.2",
+        "php": ">= 7.4",
         "nette/application": "^3.1",
         "nette/bootstrap": "^3.1",
         "nette/caching": "^3.1",
@@ -23,7 +23,8 @@
         "nette/security": "^3.1",
         "nette/utils": "^3.2",
         "latte/latte": "^2.9",
-        "tracy/tracy": "^2.8"
+        "tracy/tracy": "^2.8",
+        "pd/storage-sdk": "^1.0.0"
     },
     "require-dev": {
         "nette/tester": "^2.3",
@@ -34,5 +35,11 @@
             "Pd\\StorageAdmin\\": "app/"
         }
     },
-    "minimum-stability": "stable"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

@@ -1,0 +1,26 @@
+{
+    "name": "pd/storage",
+    "description": "Service providing abstraction layer over physical storage of files.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pd\\Storage\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">= 7.4"
+    },
+    "authors": [
+        {
+            "name": "vojtechbuba",
+            "email": "vojtech.buba@peckadesign.cz"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

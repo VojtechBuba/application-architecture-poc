@@ -1,0 +1,23 @@
+{
+    "name": "pd/storage-sdk",
+    "description": "SDK for API comunication with storage service",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pd\\StorageSDK\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vojtechbuba",
+            "email": "vojtech.buba@peckadesign.cz"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
