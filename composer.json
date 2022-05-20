@@ -50,9 +50,9 @@
         }
     ],
     "replace": {
-        "pd/storage": "1.4.0",
-        "pd/storage-admin": "1.4.0",
-        "pd/storage-sdk": "1.4.0"
+        "pd/storage": "1.4.1",
+        "pd/storage-admin": "1.4.1",
+        "pd/storage-sdk": "1.4.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
