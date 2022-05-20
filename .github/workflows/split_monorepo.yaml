@@ -23,10 +23,11 @@ jobs:
             php-version: 7.4
             coverage: none
 
-      - uses: php-actions/composer@v6
-        with:
-          php_version: "7.4"
-          version: 2.2
+      - name: composer
+        run: |
+          curl -O "https://getcomposer.org/download/2.2.12/composer.phar"
+          chmod a+x composer.phar
+          php composer.phar install
 
       # get package json list
       -
