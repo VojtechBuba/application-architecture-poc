@@ -7,7 +7,6 @@
         }
     ],
     "require": {
-        "beberlei/composer-monorepo-plugin": "^0.17.5",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.4",
         "latte/latte": "^2.9",
@@ -31,6 +30,7 @@
         "tracy/tracy": "^2.8"
     },
     "require-dev": {
+        "beberlei/composer-monorepo-plugin": "^0.17.5",
         "nette/tester": "^2.3",
         "phpunit/phpunit": "^9.5",
         "symfony/thanks": "^1",

@@ -26,6 +26,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::DATA_TO_APPEND, [
         ComposerJsonSection::REQUIRE_DEV => [
             'phpunit/phpunit' => '^9.5',
+			'beberlei/composer-monorepo-plugin' => '^0.17.5',
         ],
     ]);
 
