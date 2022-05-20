@@ -25,7 +25,7 @@ jobs:
 
       - name: composer
         run: |
-          curl -O "https://getcomposer.org/download/2.2.12/composer.phar"
+          curl -O "https://getcomposer.org/download/2.0.14/composer.phar"
           chmod a+x composer.phar
           php composer.phar install
 
