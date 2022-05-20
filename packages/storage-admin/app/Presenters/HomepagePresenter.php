@@ -3,19 +3,21 @@
 namespace Pd\StorageAdmin\Presenters;
 
 use Nette;
-use Pd\StorageSDK\Resources\Storage\GetStorageFacade;
+use Pd\StorageSDK\Resources\Files\ListCollection\ListFilesFacade;
 
 final class HomepagePresenter extends Nette\Application\UI\Presenter
 {
 
-	private GetStorageFacade $getStorageFacade;
+
+	private ListFilesFacade $listFilesFacade;
 
 
 	public function __construct(
-		GetStorageFacade $getStorageFacade
+		ListFilesFacade $listFilesFacade
 	)
 	{
-		$this->getStorageFacade = $getStorageFacade;
+
+		$this->listFilesFacade = $listFilesFacade;
 	}
 
 
@@ -23,7 +25,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 	{
 		$this->getTemplate()->add(
 			'data',
-			$this->getStorageFacade->execute()
+			$this->listFilesFacade->listFiles()
 		);
 	}
 }
