@@ -22,3 +22,4 @@ config/local.neon
 /supervisor.conf
 # macOS
 .DS_Store
+composer.lock

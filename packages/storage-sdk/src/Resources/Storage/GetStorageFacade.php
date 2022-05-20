@@ -4,6 +4,7 @@ namespace Pd\StorageSDK\Resources\Storage;
 
 use GuzzleHttp\Client;
 use Pd\StorageSDK\Config\Config;
+use function sprintf;
 
 class GetStorageFacade
 {
@@ -25,6 +26,6 @@ class GetStorageFacade
 
 		$response = $client->get('/ping');
 
-		return $response->getBody()->getContents();
+		return sprintf("%s neco",$response->getBody()->getContents());
 	}
 }

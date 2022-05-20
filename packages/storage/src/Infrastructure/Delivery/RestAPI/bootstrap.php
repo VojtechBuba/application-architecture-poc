@@ -15,20 +15,12 @@ $configurator->setTempDirectory(__DIR__ . '/temp');
 
 $configurator->addParameters([
 	'srcDir' => __DIR__ . '/../../../src',
-	'rootDir' => __DIR__ . '/../../..',
-	'php' => '/opt/homebrew/bin/php'
+	'rootDir' => __DIR__ . '/../../..'
 ]);
 
-$configurator->addConfig(__DIR__ . '/Config/config.neon');
+$configurator->addConfig(__DIR__ . '/config/config.neon');
 
-$customConfigFile = getenv('CONFIG_FILE');
-$customConfigFilePath = __DIR__ . '/Config/' . $customConfigFile;
-
-if ($customConfigFile && file_exists($customConfigFilePath)) {
-	$configurator->addConfig($customConfigFilePath);
-}
-
-$localConfig = __DIR__ . '/Config/config.local.neon';
+$localConfig = __DIR__ . '/config/config.local.neon';
 
 if (file_exists($localConfig)) {
 	$configurator->addConfig($localConfig);

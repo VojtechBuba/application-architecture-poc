@@ -7,6 +7,7 @@
         }
     ],
     "require": {
+        "beberlei/composer-monorepo-plugin": "^0.17.5",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.4",
         "latte/latte": "^2.9",

@@ -1,0 +1,12 @@
+{
+  "deps": [
+    "vendor/guzzlehttp/guzzle",
+    "vendor/nette/di",
+    "vendor/nette/schema"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pd\\StorageSDK\\": "src/"
+    }
+  }
+}

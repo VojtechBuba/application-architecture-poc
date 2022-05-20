@@ -37,8 +37,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../../packages/storage-sdk"
+            "type": "vcs",
+            "url": "https://github.com/VojtechBuba/storage-sdk"
         }
     ],
     "extra": {
