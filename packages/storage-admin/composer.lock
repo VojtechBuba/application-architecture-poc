@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5c59815270b60f540cebe88f8eb9ef0",
+    "content-hash": "3e25e9cc80187b8a64ae13d20fdb8055",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -1648,11 +1648,17 @@
         },
         {
             "name": "pd/storage-sdk",
-            "version": "dev-main",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VojtechBuba/storage-sdk.git",
+                "reference": "db8b8b56547d191058cb8fccc23cd28471a17edc"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/storage-sdk",
-                "reference": "f295b8d04777a2651d8039703e090df39416cd3d"
+                "type": "zip",
+                "url": "https://api.github.com/repos/VojtechBuba/storage-sdk/zipball/db8b8b56547d191058cb8fccc23cd28471a17edc",
+                "reference": "db8b8b56547d191058cb8fccc23cd28471a17edc",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -1678,9 +1684,11 @@
                 }
             ],
             "description": "SDK for API comunication with storage service",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/VojtechBuba/storage-sdk/tree/1.4.0",
+                "issues": "https://github.com/VojtechBuba/storage-sdk/issues"
+            },
+            "time": "2022-05-20T12:06:45+00:00"
         },
         {
             "name": "psr/http-client",
