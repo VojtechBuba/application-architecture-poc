@@ -30,7 +30,6 @@
         "tracy/tracy": "^2.8"
     },
     "require-dev": {
-        "beberlei/composer-monorepo-plugin": "^0.17.5",
         "nette/tester": "^2.3",
         "phpunit/phpunit": "^9.5",
         "symfony/thanks": "^1",

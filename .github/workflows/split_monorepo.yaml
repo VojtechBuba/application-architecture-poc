@@ -32,7 +32,7 @@ jobs:
       # get package json list
       -
         id: output_data
-        run: echo "::set-output name=matrix::$(vendor/bin/monorepo-builder packages-json --exclude-package storage)"
+        run: echo "::set-output name=matrix::$(vendor/bin/monorepo-builder packages-json --exclude-package storage storage-admin)"
 
     # this step is needed, so the output gets to the next defined job
     outputs:

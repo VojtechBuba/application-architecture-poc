@@ -35,12 +35,6 @@
             "Pd\\StorageAdmin\\": "app/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/VojtechBuba/storage-sdk"
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-main": "1.5-dev"

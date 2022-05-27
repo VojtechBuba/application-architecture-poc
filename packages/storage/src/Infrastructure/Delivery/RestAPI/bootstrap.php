@@ -2,7 +2,7 @@
 
 use Nette\Configurator;
 
-require __DIR__ . '/../../../../vendor/autoload.php';
+require __DIR__ . '/../../../../../../vendor/autoload.php';
 
 $configurator = new Nette\Configurator;
 
