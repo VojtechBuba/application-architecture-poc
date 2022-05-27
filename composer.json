@@ -44,6 +44,12 @@
             "Pd\\Storage\\": "packages/storage/src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "PdStorage\\Tests\\": "tests/unit",
+            "Pd\\Storage\\Tests\\": "packages/storage/tests"
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
