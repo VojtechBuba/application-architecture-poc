@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php declare(strict_types = 1);
+
+require __DIR__ . '/../src/bootstrap.php';
+
+/** @var $container \Nette\DI\Container */
+
+$application = $container->getByType(\Contributte\Console\Application::class);
+
+/** @var \Mezzio\Application $expressiveApplication */
+$expressiveApplication = $container->getByType(\Mezzio\Application::class);
+
+(require __DIR__ . '/../src/Infrastructure/Delivery/RestAPI/config/pipeline.php')($expressiveApplication);
+(require __DIR__ . '/../src/Infrastructure/Delivery/RestAPI/config/routes.php')($expressiveApplication);
+
+exit($application->run());

@@ -1,0 +1,3 @@
+services:
+	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\PingHandler
+	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\GetFilesHandler

@@ -34,4 +34,40 @@ class File
 		$this->extension = $extension;
 		$this->created = new DateTimeImmutable();
 	}
+
+
+	public function getId(): FileId
+	{
+		return $this->id;
+	}
+
+
+	public function getPath(): Path
+	{
+		return $this->path;
+	}
+
+
+	public function getSize(): Byte
+	{
+		return $this->size;
+	}
+
+
+	public function getTenantId(): TenantId
+	{
+		return $this->tenantId;
+	}
+
+
+	public function getExtension(): Extension
+	{
+		return $this->extension;
+	}
+
+
+	public function getCreated(): DateTimeImmutable
+	{
+		return $this->created;
+	}
 }
