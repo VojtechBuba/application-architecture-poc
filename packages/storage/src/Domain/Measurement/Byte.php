@@ -1,23 +1,22 @@
 <?php declare(strict_types = 1);
 
 
-namespace Pd\Storage\Domain;
+namespace Pd\Storage\Domain\Measurement;
 
-class TenantId
+class Byte
 {
 
-	private string $value;
-
+	private int $value;
 
 	public function __construct(
-		string $value
+		int $value
 	)
 	{
 		$this->value = $value;
 	}
 
 
-	public function getValue(): string
+	public function getValue(): int
 	{
 		return $this->value;
 	}

@@ -1,0 +1,35 @@
+extensions:
+	nettrine.cache: Nettrine\Cache\DI\CacheExtension
+
+	# DBAL
+	nettrine.dbal: Nettrine\DBAL\DI\DbalExtension
+	nettrine.dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
+
+	# ORM
+	nettrine.orm: Nettrine\ORM\DI\OrmExtension
+	nettrine.orm.cache: Nettrine\ORM\DI\OrmCacheExtension
+	nettrine.orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+	nettrine.orm.xml: Nettrine\ORM\DI\OrmXmlExtension
+
+nettrine.orm.xml:
+	mapping: [
+		Pd\Storage: %srcDir%/Infrastructure/Persistence/Doctrine/Mapping,
+	]
+	fileExtension: .dcm.xml
+	simple: false
+
+nettrine.dbal:
+	connection:
+		driver: mysqli
+		user: root
+		password: 'root'
+		dbname: ''
+
+		types:
+			storage.byte: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\ByteType
+			storage.directory: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\DirectoryType
+			storage.extension: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\ExtensionType
+			storage.fileId: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\FileIdType
+			storage.fileName: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\FileNameType
+			storage.path: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\PathType
+			storage.tenantId: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\TenantIdType

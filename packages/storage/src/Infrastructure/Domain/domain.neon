@@ -1,0 +1,7 @@
+services:
+	- Pd\Storage\Application\CreateNewFileUseCase
+	- Pd\Storage\Infrastructure\Domain\DoctrineFilesRepository
+	-
+		factory: Pd\Storage\Infrastructure\Domain\LocalFileSystemService
+		arguments:
+			storageDirectory: %storageDirectory%

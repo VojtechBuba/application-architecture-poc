@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Mezzio\Application;
 use Mezzio\MiddlewareFactory;
+use Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\CreateNewFileHandler;
 use Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\GetFilesHandler;
 use Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\PingHandler;
 use Psr\Container\ContainerInterface;
@@ -42,4 +43,5 @@ use Psr\Container\ContainerInterface;
 return static function (Application $app): void {
     $app->get('/ping', PingHandler::class, 'api.ping');
 	$app->get('/files', GetFilesHandler::class, 'api.files');
+	$app->post('/files', CreateNewFileHandler::class, CreateNewFileHandler::class);
 };

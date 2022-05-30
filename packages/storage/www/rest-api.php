@@ -1,14 +1,14 @@
 <?php declare(strict_types = 1);
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/../src/bootstrap.php';
 
 /** @var $container \Nette\DI\Container */
 
 /** @var \Mezzio\Application $mezzioApplication */
 $mezzioApplication = $container->getByType(\Mezzio\Application::class);
 
-(require '../config/pipeline.php')($mezzioApplication);
-(require '../config/routes.php')($mezzioApplication);
+(require '../src/Infrastructure/Delivery/RestAPI/config/pipeline.php')($mezzioApplication);
+(require '../src/Infrastructure/Delivery/RestAPI/config/routes.php')($mezzioApplication);
 
 $mezzioApplication->run();
 

@@ -2,27 +2,36 @@
     "name": "pd/storage",
     "description": "Service providing abstraction layer over physical storage of files.",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Pd\\Storage\\": "src/"
-        }
-    },
-    "require": {
-        "php": ">= 7.4",
-        "mezzio/mezzio": "^3.9.0",
-        "mezzio/mezzio-helpers": "^5.8.0",
-        "mezzio/mezzio-laminasrouter": "^3.4.0",
-        "nette/application": "^3.1",
-        "nette/bootstrap": "^3.1",
-        "nette/di": "^3.0",
-        "tracy/tracy": "^2.8"
-    },
     "authors": [
         {
             "name": "vojtechbuba",
             "email": "vojtech.buba@peckadesign.cz"
         }
     ],
+    "require": {
+        "php": ">= 7.4",
+        "ext-fileinfo": "*",
+        "mezzio/mezzio": "^3.9.0",
+        "mezzio/mezzio-helpers": "^5.8.0",
+        "mezzio/mezzio-laminasrouter": "^3.4.0",
+        "nette/application": "^3.1",
+        "nette/bootstrap": "^3.1",
+        "nette/di": "^3.0",
+        "tracy/tracy": "^2.8",
+        "nettrine/orm": "^0.8.3",
+        "contributte/console": "^0.9.2",
+        "ramsey/uuid": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pd\\Storage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pd\\Storage\\Tests\\": "tests"
+        }
+    },
     "prefer-stable": true,
     "minimum-stability": "dev",
     "extra": {

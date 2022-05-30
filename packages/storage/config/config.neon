@@ -3,6 +3,7 @@
 # https://nette.org/security-warning
 #
 parameters:
+	storageDirectory: %rootDir%data
 
 php:
 	max_execution_time: 0
@@ -11,6 +12,7 @@ php:
 extensions:
 #	console: Kdyby\Console\DI\ConsoleExtension
 	mezzioDiBridge: Pd\Storage\Infrastructure\MezzioBridge\DI\MezzioDependencyInjectionBridgeExtension
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 
 mezzioDiBridge:
 	url: http://api.storage.test
@@ -19,8 +21,6 @@ application:
 	scanDirs: false
 
 includes:
-
-services:
-	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\PingHandler
-	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\GetFilesHandler
-
+	- ../src/Infrastructure/Delivery/RestAPI/config/restApi.neon
+	- ../src/Infrastructure/Persistence/Doctrine/doctrine.neon
+	- ../src/Infrastructure/Domain/domain.neon
