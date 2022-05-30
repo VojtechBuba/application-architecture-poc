@@ -24,7 +24,7 @@
         "nette/utils": "^3.2",
         "latte/latte": "^2.9",
         "tracy/tracy": "^2.8",
-        "pd/storage-sdk": "^1.5.1"
+        "pd/storage-sdk": "^1.6"
     },
     "require-dev": {
         "nette/tester": "^2.3",
