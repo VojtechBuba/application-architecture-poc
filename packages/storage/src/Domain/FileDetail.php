@@ -1,12 +1,13 @@
 <?php declare(strict_types = 1);
 
+
 namespace Pd\Storage\Domain;
 
 use DateTimeImmutable;
-use Pd\Storage\Domain\Measurement\Byte;
 use Pd\Storage\Domain\FileSystem\Path;
+use Pd\Storage\Domain\Measurement\Byte;
 
-class File
+class FileDetail
 {
 
 	private FileId $id;
@@ -21,12 +22,14 @@ class File
 
 	private DateTimeImmutable $created;
 
+
 	public function __construct(
 		FileId $id,
 		Path $path,
 		Byte $size,
 		TenantId $tenantId,
-		Extension $extension
+		Extension $extension,
+		DateTimeImmutable $created
 	)
 	{
 		$this->id = $id;
@@ -34,7 +37,7 @@ class File
 		$this->size = $size;
 		$this->tenantId = $tenantId;
 		$this->extension = $extension;
-		$this->created = new DateTimeImmutable();
+		$this->created = $created;
 	}
 
 
@@ -44,15 +47,32 @@ class File
 	}
 
 
-	public function getDetail(): FileDetail
+	public function getPath(): Path
 	{
-		return new FileDetail(
-			$this->id,
-			$this->path,
-			$this->size,
-			$this->tenantId,
-			$this->extension,
-			$this->created
-		);
+		return $this->path;
+	}
+
+
+	public function getSize(): Byte
+	{
+		return $this->size;
+	}
+
+
+	public function getTenantId(): TenantId
+	{
+		return $this->tenantId;
+	}
+
+
+	public function getExtension(): Extension
+	{
+		return $this->extension;
+	}
+
+
+	public function getCreated(): DateTimeImmutable
+	{
+		return $this->created;
 	}
 }

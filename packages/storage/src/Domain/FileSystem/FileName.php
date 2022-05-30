@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 
-namespace Pd\Storage\Domain;
+namespace Pd\Storage\Domain\FileSystem;
 
 use Pd\Storage\Domain\Exception\InvalidDirectoryNameException;
 use Pd\Storage\Domain\Exception\UnexpectedFileNameCharacters;

@@ -24,3 +24,12 @@ nettrine.dbal:
 		user: root
 		password: 'root'
 		dbname: ''
+
+		types:
+			storage.byte: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\ByteType
+			storage.directory: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\DirectoryType
+			storage.extension: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\ExtensionType
+			storage.fileId: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\FileIdType
+			storage.fileName: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\FileNameType
+			storage.path: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\PathType
+			storage.tenantId: Pd\Storage\Infrastructure\Persistence\Doctrine\Type\TenantIdType

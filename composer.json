@@ -8,6 +8,7 @@
     ],
     "require": {
         "contributte/console": "^0.9.2",
+        "ext-fileinfo": "*",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.4",
         "latte/latte": "^2.9",
@@ -29,6 +30,7 @@
         "nette/utils": "^3.2",
         "nettrine/orm": "^0.8.3",
         "php": ">= 7.4",
+        "ramsey/uuid": "^4.2",
         "tracy/tracy": "^2.8"
     },
     "require-dev": {

@@ -3,7 +3,7 @@
 namespace Pd\Storage\Tests\Domain;
 
 use Pd\Storage\Domain\Exception\UnexpectedFileNameCharacters;
-use Pd\Storage\Domain\FileName;
+use Pd\Storage\Domain\FileSystem\FileName;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 

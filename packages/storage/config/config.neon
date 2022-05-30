@@ -3,6 +3,7 @@
 # https://nette.org/security-warning
 #
 parameters:
+	storageDirectory: %rootDir%data
 
 php:
 	max_execution_time: 0
@@ -22,3 +23,4 @@ application:
 includes:
 	- ../src/Infrastructure/Delivery/RestAPI/config/restApi.neon
 	- ../src/Infrastructure/Persistence/Doctrine/doctrine.neon
+	- ../src/Infrastructure/Domain/domain.neon

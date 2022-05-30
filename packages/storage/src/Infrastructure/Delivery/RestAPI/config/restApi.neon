@@ -1,3 +1,5 @@
 services:
 	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\PingHandler
 	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\GetFilesHandler
+	- Pd\Storage\Infrastructure\Delivery\RestAPI\Middleware\PersistenceMiddleware
+	- Pd\Storage\Infrastructure\Delivery\RestAPI\Resources\Files\CreateNewFileHandler
