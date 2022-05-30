@@ -1,3 +1,4 @@
 services:
 	- Pd\StorageSDK\Resources\Storage\GetStorageFacade
 	- Pd\StorageSDK\Resources\Files\ListCollection\ListFilesFacade
+	- Pd\StorageSDK\Resources\Files\UploadFile\UploadFileFacade
