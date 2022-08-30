@@ -55,7 +55,7 @@ jobs:
         if: "!startsWith(github.ref, 'refs/tags/')"
         # Uses an action in the root directory
         name: Monorepo Split of ${{ matrix.package }}
-        uses: VojtechBuba/monorepo-split-github-action
+        uses: https://github.com/VojtechBuba/monorepo-split-github-action
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
