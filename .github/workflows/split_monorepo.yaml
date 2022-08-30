@@ -71,15 +71,15 @@ jobs:
         if: "startsWith(github.ref, 'refs/tags/')"
         # Uses an action in the root directory
         name: Monorepo Tagged Split of ${{ matrix.package }}
-        uses: symplify/github-action-monorepo-split@2.0
+        uses: VojtechBuba/monorepo-split-github-action@main
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           tag: ${GITHUB_REF#refs/tags/}
 
-          packagedirectory: 'packages/${{ matrix.package }}'
-          split-repository-organization: 'VojtechBuba'
-          split-repository-name: '${{ matrix.package }}'
-          user-name: "GitHub Action"
-          user-email: "action@github.com"
+          package_directory: 'packages/${{ matrix.package }}'
+          repository_organization: 'VojtechBuba'
+          repository_name: '${{ matrix.package }}'
+          user_name: "GitHub Action"
+          user_email: "action@github.com"
           branch: "main"
