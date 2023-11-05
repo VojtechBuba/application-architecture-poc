@@ -59,9 +59,9 @@
         }
     ],
     "replace": {
-        "pd/storage": "1.11.0",
-        "pd/storage-admin": "1.11.0",
-        "pd/storage-sdk": "1.11.0"
+        "pd/storage": "1.12.0",
+        "pd/storage-admin": "1.12.0",
+        "pd/storage-sdk": "1.12.0"
     },
     "config": {
         "allow-plugins": {
