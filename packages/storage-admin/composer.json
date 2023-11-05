@@ -24,7 +24,7 @@
         "nette/utils": "^3.2",
         "latte/latte": "^2.9",
         "tracy/tracy": "^2.8",
-        "pd/storage-sdk": "^1.10"
+        "pd/storage-sdk": "^1.11"
     },
     "require-dev": {
         "nette/tester": "^2.3",
@@ -37,7 +37,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.10-dev"
+            "dev-main": "1.11-dev"
         }
     },
     "prefer-stable": true,
