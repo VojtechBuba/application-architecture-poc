@@ -1,5 +1,9 @@
 <?php declare(strict_types = 1);
 
+use Pd\Storage\Monorepo\CommitNextDevReleaseWorker;
+use Pd\Storage\Monorepo\CommitPrepareReleaseWorker;
+use Pd\Storage\Monorepo\CreatePrepareReleaseBranchWorker;
+use Pd\Storage\Monorepo\PushPrepareReleaseBranchWorker;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 use Symplify\MonorepoBuilder\ValueObject\Option;
@@ -28,16 +32,17 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'phpunit/phpunit' => '^9.5',
         ],
     ]);
+	$parameters->set('enable_default_release_workers', false);
 
 	$services = $containerConfigurator->services();
 
 	# release workers - in order to execute
+	$services->set(CreatePrepareReleaseBranchWorker::class);
 	$services->set(UpdateReplaceReleaseWorker::class);
 	$services->set(SetCurrentMutualDependenciesReleaseWorker::class);
-	$services->set(AddTagToChangelogReleaseWorker::class);
-	$services->set(TagVersionReleaseWorker::class);
-	$services->set(PushTagReleaseWorker::class);
+	$services->set(CommitPrepareReleaseWorker::class);
 	$services->set(SetNextMutualDependenciesReleaseWorker::class);
 	$services->set(UpdateBranchAliasReleaseWorker::class);
-	$services->set(PushNextDevReleaseWorker::class);
+	$services->set(CommitNextDevReleaseWorker::class);
+	$services->set(PushPrepareReleaseBranchWorker::class);
 };
