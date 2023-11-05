@@ -59,15 +59,15 @@
         }
     ],
     "replace": {
-        "pd/storage": "1.5.1",
-        "pd/storage-admin": "1.5.1",
-        "pd/storage-sdk": "1.5.1"
+        "pd/storage": "1.6.0",
+        "pd/storage-admin": "1.6.0",
+        "pd/storage-sdk": "1.6.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "symfony/thanks": false
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
