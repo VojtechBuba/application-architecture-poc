@@ -19,3 +19,5 @@ funkční a nebudou v něm chyby, což by hrozilo v případě že by se použí
 
 Aplikace bude mít vybudované REST API rovnou a bude možné jej použít jak při integraci s třetí stranou obecně
 , tak při psaní můstku pro komunikaci s ERP. 
+
+## PoC releasováni
