@@ -4,6 +4,7 @@ use Pd\Storage\Monorepo\CommitNextDevReleaseWorker;
 use Pd\Storage\Monorepo\CommitPrepareReleaseWorker;
 use Pd\Storage\Monorepo\CreatePrepareReleaseBranchWorker;
 use Pd\Storage\Monorepo\PushPrepareReleaseBranchWorker;
+use Pd\Storage\Monorepo\WriteApplicationVersionWorker;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\ComposerJsonManipulator\ValueObject\ComposerJsonSection;
 use Symplify\MonorepoBuilder\ValueObject\Option;
@@ -40,6 +41,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 	$services->set(CreatePrepareReleaseBranchWorker::class);
 	$services->set(UpdateReplaceReleaseWorker::class);
 	$services->set(SetCurrentMutualDependenciesReleaseWorker::class);
+	$services->set(WriteApplicationVersionWorker::class);
 	$services->set(CommitPrepareReleaseWorker::class);
 	$services->set(SetNextMutualDependenciesReleaseWorker::class);
 	$services->set(UpdateBranchAliasReleaseWorker::class);
