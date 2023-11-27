@@ -26,4 +26,5 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material
       - run: pip install mike
+      - run: git fetch origin gh-pages --depth=1
       - run: mike deploy ${{ github.ref_name }} --push
