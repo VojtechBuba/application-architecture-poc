@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Marketing
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: images/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    scheme: default
+    primary: custom
+    accent: red
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - mike
+  - search
+
+extra:
+  version:
+    provider: mike
+    default: development
+
+nav:
+  - 'Funkce':
+    - Kampaně:
+      - 'Dárek k produktu': 'campaigns/product-gift-campaign.md'
+      - 'Dárek k objednávce': 'campaigns/order-gift-campaign.md'
+      - 'Sleva na dopravu': 'campaigns/delivery-discount.md'
+    - 'Slevy':
+        - 'Množstevní slevy': 'discounts/quantity-discount.md'
+  - 'Dev': 'dev/how-to-start.md'
+
+markdown_extensions:
+  - tables
